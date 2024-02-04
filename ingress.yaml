@@ -3,15 +3,14 @@ kind: Ingress
 metadata:
   name: codechallenge-ingress
   annotations:
-    nginx.ingress.kubernetes.io/rewrite-target: /
-    nginx.ingress.kubernetes.io/use-regex: /$1
+    nginx.ingress.kubernetes.io/rewrite-target: /$1
   namespace: default
 spec:
   ingressClassName: nginx
   rules:
   - http:
       paths:
-      - path: /codechallenge/?(.*)
+      - path: /codechallenge/(.*)
         pathType: Prefix
         backend:
           service:
