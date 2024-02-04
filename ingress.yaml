@@ -4,7 +4,7 @@ metadata:
   name: codechallenge-ingress
   annotations:
     nginx.ingress.kubernetes.io/rewrite-target: /
-    nginx.ingress.kubernetes.io/use-regex: $1
+    nginx.ingress.kubernetes.io/use-regex: /$1
   namespace: default
 spec:
   ingressClassName: nginx
