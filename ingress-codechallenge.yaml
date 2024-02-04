@@ -17,5 +17,4 @@ spec:
             name: codechallenge2
             port:
               number: 8080
-
-     
+  
